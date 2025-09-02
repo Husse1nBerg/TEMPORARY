@@ -84,3 +84,6 @@ build/
 .cache/
 tmp/
 temp/
+
+#api keys
+backend/.env
