@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Cucumbers",
+    "category": "A",
+    "keywords": ["cucumber", "خيار"],
+    "description": "Fresh cucumbers",
+    "is_organic": false
+  },
+  {
+    "name": "Tomatoes",
+    "category": "A",
+    "keywords": ["tomato", "tomatoes", "طماطم"],
+    "description": "Fresh tomatoes",
+    "is_organic": false
+  },
+  {
+    "name": "Cherry Tomatoes",
+    "category": "A",
+    "keywords": ["cherry tomato", "طماطم كرزية"],
+    "description": "Cherry tomatoes",
+    "is_organic": false
+  },
+  {
+    "name": "Capsicum Red and Yellow Mix",
+    "category": "A",
+    "keywords": ["capsicum mix", "pepper mix"],
+    "description": "Mixed red and yellow bell peppers",
+    "is_organic": false
+  },
+  {
+    "name": "Capsicum Red",
+    "category": "A",
+    "keywords": ["red capsicum", "red pepper", "فلفل أحمر"],
+    "description": "Red bell peppers",
+    "is_organic": false
+  },
+  {
+    "name": "Capsicum Yellow",
+    "category": "A",
+    "keywords": ["yellow capsicum", "yellow pepper", "فلفل أصفر"],
+    "description": "Yellow bell peppers",
+    "is_organic": false
+  },
+  {
+    "name": "Chili Pepper",
+    "category": "A",
+    "keywords": ["chili", "hot pepper", "فلفل حار"],
+    "description": "Hot chili peppers",
+    "is_organic": false
+  },
+  {
+    "name": "Arugula",
+    "category": "A",
+    "keywords": ["arugula", "rocket", "جرجير"],
+    "description": "Fresh arugula leaves",
+    "is_organic": false
+  },
+  {
+    "name": "Parsley",
+    "category": "A",
+    "keywords": ["parsley", "بقدونس"],
+    "description": "Fresh parsley",
+    "is_organic": false
+  },
+  {
+    "name": "Coriander",
+    "category": "A",
+    "keywords": ["coriander", "cilantro", "كزبرة"],
+    "description": "Fresh coriander/cilantro",
+    "is_organic": false
+  },
+  {
+    "name": "Mint",
+    "category": "A",
+    "keywords": ["mint", "نعناع"],
+    "description": "Fresh mint leaves",
+    "is_organic": false
+  },
+  {
+    "name": "Tuscan Kale",
+    "category": "A",
+    "keywords": ["tuscan kale", "lacinato kale", "dinosaur kale"],
+    "description": "Tuscan/Lacinato kale",
+    "is_organic": false
+  },
+  {
+    "name": "Italian Basil",
+    "category": "A",
+    "keywords": ["basil", "italian basil", "ريحان"],
+    "description": "Fresh Italian basil",
+    "is_organic": false
+  },
+  {
+    "name": "Colored Cherry Tomatoes",
+    "category": "B",
+    "keywords": ["colored cherry", "rainbow tomatoes"],
+    "description": "Mixed colored cherry tomatoes",
+    "is_organic": false
+  },
+  {
+    "name": "Capsicum Green",
+    "category": "B",
+    "keywords": ["green capsicum", "green pepper", "فلفل أخضر"],
+    "description": "Green bell peppers",
+    "is_organic": false
+  },
+  {
+    "name": "Italian Arugula",
+    "category": "B",
+    "keywords": ["italian arugula", "wild arugula"],
+    "description": "Italian/wild arugula",
+    "is_organic": false
+  },
+  {
+    "name": "Chives",
+    "category": "B",
+    "keywords": ["chives", "ثوم معمر"],
+    "description": "Fresh chives",
+    "is_organic": false
+  },
+  {
+    "name": "Curly Kale",
+    "category": "B",
+    "keywords": ["curly kale", "kale"],
+    "description": "Curly kale",
+    "is_organic": false
+  },
+  {
+    "name": "Batavia Lettuce",
+    "category": "B",
+    "keywords": ["batavia", "batavia lettuce"],
+    "description": "Batavia lettuce",
+    "is_organic": false
+  },
+  {
+    "name": "Ice Berg Lettuce",
+    "category": "B",
+    "keywords": ["iceberg", "iceberg lettuce", "خس آيسبرغ"],
+    "description": "Iceberg lettuce",
+    "is_organic": false
+  },
+  {
+    "name": "Oak Leaf Lettuce",
+    "category": "B",
+    "keywords": ["oak leaf", "oakleaf lettuce"],
+    "description": "Oak leaf lettuce",
+    "is_organic": false
+  },
+  {
+    "name": "Romain Lettuce",
+    "category": "B",
+    "keywords": ["romaine", "romain lettuce", "خس روماني"],
+    "description": "Romaine lettuce",
+    "is_organic": false
+  }
+]

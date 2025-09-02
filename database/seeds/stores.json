@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Gourmet Egypt",
+    "url": "https://gourmetegypt.com/",
+    "type": "Online Basket",
+    "scraper_class": "GourmetScraper",
+    "is_active": true
+  },
+  {
+    "name": "RDNA",
+    "url": "https://www.rdnastore.com/",
+    "type": "Online Basket",
+    "scraper_class": "RDNAScraper",
+    "is_active": true
+  },
+  {
+    "name": "Metro",
+    "url": "https://www.metro-markets.com/",
+    "type": "Online Basket",
+    "scraper_class": "MetroScraper",
+    "is_active": true
+  },
+  {
+    "name": "Spinneys",
+    "url": "https://spinneys-egypt.com/en",
+    "type": "Online Basket",
+    "scraper_class": "SpinneysScraper",
+    "is_active": true
+  },
+  {
+    "name": "Rabbit",
+    "url": "https://www.rabbitmart.com/eg/",
+    "type": "Online Basket",
+    "scraper_class": "RabbitScraper",
+    "is_active": true
+  },
+  {
+    "name": "Lulu Market",
+    "url": "https://www.talabat.com/egypt/lulu-hypermarket-tagammoa-1--el-nakhil",
+    "type": "Talabat App",
+    "scraper_class": "TalabatScraper",
+    "is_active": true
+  },
+  {
+    "name": "Mahmoud Elfar",
+    "url": "https://www.talabat.com/ar/egypt/mahmoud-elfar",
+    "type": "Talabat App",
+    "scraper_class": "TalabatScraper",
+    "is_active": true
+  },
+  {
+    "name": "The Grocer",
+    "url": "https://instashop.com/en-eg",
+    "type": "Instashop App",
+    "scraper_class": "InstashopScraper",
+    "is_active": true
+  },
+  {
+    "name": "Royal House",
+    "url": "https://instashop.com/en-eg",
+    "type": "Instashop App",
+    "scraper_class": "InstashopScraper",
+    "is_active": true
+  },
+  {
+    "name": "Breadfast",
+    "url": "https://apps.apple.com/us/app/breadfast-groceries-and-more/id1288436997",
+    "type": "App",
+    "scraper_class": "BreadfastScraper",
+    "is_active": true
+  }
+]
