@@ -122,6 +122,10 @@ app.include_router(stores.router, prefix="/api/stores", tags=["Stores"])
 app.include_router(prices.router, prefix="/api/prices", tags=["Prices"])
 app.include_router(scraper.router, prefix="/api/scraper", tags=["Scraper"])
 
+# Add AI router
+from app.api import ai
+app.include_router(ai.router, prefix="/api/ai", tags=["AI Analysis"])
+
 # WebSocket endpoint for real-time updates
 from fastapi import WebSocket, WebSocketDisconnect
 from typing import List
