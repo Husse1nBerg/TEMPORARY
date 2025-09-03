@@ -4,12 +4,19 @@ Path: backend/app/config.py
 """
 
 from pydantic_settings import BaseSettings
-from typing import List
+from pydantic import ConfigDict
+from typing import List, Optional
 import os
 from functools import lru_cache
 
 class Settings(BaseSettings):
     """Application settings"""
+    
+    model_config = ConfigDict(
+        env_file=".env",
+        case_sensitive=True,
+        extra="allow"
+    )
     
     # Database
     DATABASE_URL: str = "postgresql://crops_admin:SecurePassword123!@localhost:5432/crops_tracker"
@@ -51,9 +58,12 @@ class Settings(BaseSettings):
     DEFAULT_PAGE_SIZE: int = 20
     MAX_PAGE_SIZE: int = 100
     
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
+    # AI Services
+    ANTHROPIC_API_KEY: Optional[str] = None
+    OPENAI_API_KEY: Optional[str] = None
+    
+    # Development
+    DEBUG: bool = False
 
 @lru_cache()
 def get_settings():

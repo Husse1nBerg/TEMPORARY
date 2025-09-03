@@ -27,10 +27,13 @@ export interface Price {
   scraped_at: string;
 }
 
+// UPDATE THIS TYPE DEFINITION
 export function usePrices(initialFilters?: {
   category?: string;
   store_id?: number;
   is_available?: boolean;
+  limit?: number; // Add limit
+  skip?: number;  // Add skip
 }) {
   const [prices, setPrices] = useState<Price[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,9 +43,9 @@ export function usePrices(initialFilters?: {
   const fetchPrices = useCallback(async () => {
     try {
       setLoading(true);
+      // PASS THE FILTERS (INCLUDING LIMIT) TO THE API CALL
       const data = await api.getPrices({
         ...filters,
-        limit: 100,
       });
       setPrices(data);
     } catch (error) {

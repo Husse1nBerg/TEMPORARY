@@ -1,0 +1,33 @@
+
+#This file defines the services that expose your frontend and backend deployments, allowing them to communicate with each other and be accessed from the outside.
+#frontend-service: Exposes the frontend application, typically through a LoadBalancer to be accessible from the internet.
+#backend-service: Exposes the backend application within the cluster using a ClusterIP, allowing the frontend to communicate with it.
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: LoadBalancer # Exposes the service externally using a cloud provider's load balancer
+  selector:
+    app: frontend
+  ports:
+  - protocol: TCP
+    port: 80       # Port to access the service on
+    targetPort: 3000 # Port the frontend container is running on
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  type: ClusterIP # Exposes the service on a cluster-internal IP
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 80       # Port the service will be available on within the cluster
+    targetPort: 8000 # Port the backend container is running on

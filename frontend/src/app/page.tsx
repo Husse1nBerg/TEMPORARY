@@ -193,7 +193,7 @@ export default function HomePage() {
                   Sign In
                 </button>
               </Link>
-              <Link href="/auth/login">
+              <Link href="/auth/register">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -227,11 +227,18 @@ export default function HomePage() {
                 <Link href="#features" className="block py-2 text-gray-700">Features</Link>
                 <Link href="#pricing" className="block py-2 text-gray-700">Pricing</Link>
                 <Link href="#contact" className="block py-2 text-gray-700">Contact</Link>
-                <Link href="/auth/login" className="block">
-                  <button className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium">
-                    Sign In / Get Started
-                  </button>
-                </Link>
+                <div className="space-y-2">
+                  <Link href="/auth/login" className="block">
+                    <button className="w-full py-3 border-2 border-green-500 text-green-600 rounded-lg font-medium hover:bg-green-50 transition-colors">
+                      Sign In
+                    </button>
+                  </Link>
+                  <Link href="/auth/register" className="block">
+                    <button className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium">
+                      Get Started
+                    </button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
@@ -274,7 +281,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Link href="/auth/login">
+                <Link href="/auth/register">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

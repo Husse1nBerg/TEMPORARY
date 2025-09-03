@@ -1,0 +1,81 @@
+#This file defines the deployments for the three main components of your application: the frontend, the backend API, and the scraper worker.
+#Frontend: Deploys the Next.js application.
+#Backend: Deploys the FastAPI application.
+#Scraper: Deploys the Celery worker for background scraping tasks.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: your-repo/crops-frontend:latest # Replace with your actual image path
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NEXT_PUBLIC_API_URL
+          value: "http://backend-service" # This will resolve to the backend service
+        - name: NEXT_PUBLIC_WEBSOCKET_URL
+          value: "ws://backend-service/ws"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: your-repo/crops-backend:latest # Replace with your actual image path
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - secretRef:
+            name: backend-secrets # Assumes you've created a secret with DB_URL, SECRET_KEY, etc.
+        - configMapRef:
+            name: backend-config # Assumes a configmap for non-sensitive config
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scraper-deployment
+spec:
+  replicas: 1 # Typically you only need one scraper worker unless the workload is very high
+  selector:
+    matchLabels:
+      app: scraper
+  template:
+    metadata:
+      labels:
+        app: scraper
+    spec:
+      containers:
+      - name: scraper
+        image: your-repo/crops-scraper:latest # Replace with your actual image path
+        envFrom:
+        - secretRef:
+            name: backend-secrets # Scraper uses the same secrets as the backend
+        - configMapRef:
+            name: backend-config
